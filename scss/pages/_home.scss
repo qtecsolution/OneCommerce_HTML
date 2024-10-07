@@ -421,7 +421,7 @@ body {
     }
   }
 }
-
+// payment_section
 .payment_section {
   padding-top: size(70);
   @include breakpoint(mobile768) {
@@ -443,6 +443,7 @@ body {
     }
   }
 }
+// free_plan_section
 .free_plan_section {
   padding-top: size(70);
   @include breakpoint(mobile768) {
@@ -460,6 +461,58 @@ body {
         @include breakpoint(mobile576) {
           width: size(104);
         }
+      }
+    }
+  }
+}
+
+// PROCESS-SECTION-START
+.process_section {
+  &_wrapper {
+    .process_section_header {
+      display: flex;
+      flex-direction: column;
+      gap: size(38);
+
+      .process_section_title {
+        display: flex;
+        gap: size(12);
+        padding: size(5) size(21);
+        justify-content: center;
+        align-items: center;
+        @include radius(8);
+        border: 1px solid #fd1774;
+
+        svg {
+          width: size(10);
+          height: size(10);
+        }
+        .sub_title {
+          color: #fd1774;
+          font-family: $primaryfont;
+          font-size: size(20);
+          font-weight: 500;
+          margin-top: size(6);
+        }
+      }
+      .title {
+        color: #1a0013;
+        text-align: center;
+        font-family: $primaryfont;
+        font-size: size(28);
+        @include breakpoint(mobile768) {
+          font-size: size(42);
+        }
+        font-weight: 700;
+        span {
+          color: #7024ec;
+        }
+      }
+      .description {
+        color: #52474f;
+        text-align: center;
+        font-family: $primaryfont;
+        font-size: size(20);
       }
     }
   }
