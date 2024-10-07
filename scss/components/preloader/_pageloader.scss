@@ -19,18 +19,19 @@
 
 .loader-7 {
   @include square(64);
-  @include border(solid, 3, $blue-green-600);
+  @include border(solid, 3, $primaryColor);
   @include circle;
   display: inline-block;
   position: relative;
   animation: rotation 1s linear infinite;
 
-  &:after, &:before {
-    content: '';
+  &:after,
+  &:before {
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
-    background: $blue-green-600;
+    background: $primaryColor;
     width: calc(size(64) / 8);
     height: calc(size(64) / 8);
     @include circle;

@@ -4,7 +4,7 @@
 	- Version: 1.0
 	- Website: https://qtecsolution.com/
 ================================= */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 html {
   box-sizing: border-box;
@@ -197,7 +197,7 @@ video::selection {
 body {
   background: hsl(0, 0%, 100%);
   color: #19191a;
-  font-family: "Inter", sans-serif;
+  font-family: "Baloo Da 2", sans-serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -213,7 +213,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Baloo Da 2", sans-serif;
   text-wrap: balance;
 }
 h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection {
@@ -286,7 +286,7 @@ select {
 .display-4,
 .display-5,
 .display-6 {
-  font-family: "Inter", sans-serif;
+  font-family: "Baloo Da 2", sans-serif;
   text-wrap: balance;
 }
 
@@ -297,6 +297,52 @@ p {
 hr {
   margin: 0rem;
   opacity: 1;
+}
+
+.singUp_button {
+  display: inline-flex;
+  font-size: 0.75rem;
+  padding: 0.625rem 0.625rem 0.5rem 0.625rem;
+  border-radius: 0.625rem;
+  background: hsl(0, 0%, 100%);
+  color: #de00a5;
+  font-family: "Baloo Da 2", sans-serif;
+  font-weight: 500;
+  line-height: 125%;
+  transition: all 0.35s ease-in-out;
+}
+@media screen and (min-width: 48rem) {
+  .singUp_button {
+    padding: 0.8125rem 1.5625rem 0.75rem 1.5625rem;
+    font-size: 1.125rem;
+  }
+}
+.singUp_button:hover {
+  background: #de00a5;
+  color: hsl(0, 0%, 100%);
+}
+
+.logIn_button {
+  display: inline-flex;
+  font-size: 0.75rem;
+  padding: 0.625rem 0.625rem 0.5rem 0.625rem;
+  border-radius: 0.625rem;
+  background: #de00a5;
+  color: hsl(0, 0%, 100%);
+  font-family: "Baloo Da 2", sans-serif;
+  font-weight: 500;
+  line-height: 125%;
+  transition: all 0.35s ease-in-out;
+}
+@media screen and (min-width: 48rem) {
+  .logIn_button {
+    padding: 0.8125rem 1.5625rem 0.75rem 1.5625rem;
+    font-size: 1.125rem;
+  }
+}
+.logIn_button:hover {
+  background: hsl(0, 0%, 100%);
+  color: #de00a5;
 }
 
 input,
@@ -373,7 +419,7 @@ input[type=search]::-webkit-search-results-decoration:focus {
 .loader-7 {
   width: 4rem;
   height: 4rem;
-  border: solid 0.1875rem #107cb9;
+  border: solid 0.1875rem #de00a5;
   border-radius: 100%;
   display: inline-block;
   position: relative;
@@ -384,7 +430,7 @@ input[type=search]::-webkit-search-results-decoration:focus {
   position: absolute;
   left: 0;
   top: 0;
-  background: #107cb9;
+  background: #de00a5;
   width: calc(4rem / 8);
   height: calc(4rem / 8);
   border-radius: 100%;
@@ -410,6 +456,92 @@ table tr {
 table tr th,
 table tr td {
   vertical-align: middle;
+}
+
+body {
+  font-family: "Baloo Da 2", sans-serif;
+}
+
+.header {
+  background: url("../../assets/images/Home/Hero-bg.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header_wrapper {
+  padding: 1.875rem 0rem;
+}
+.header_wrapper .inner_nav .logo .mobile-menu {
+  border: none;
+  padding-top: 7px;
+  border-radius: 100%;
+  width: 1.875rem;
+  height: 1.875rem;
+}
+.header_wrapper .inner_nav .logo img {
+  width: 8.125rem;
+}
+@media screen and (min-width: 48rem) {
+  .header_wrapper .inner_nav .logo img {
+    width: 11.5625rem;
+  }
+}
+.header_wrapper .inner_nav .navLinks {
+  gap: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid #dec8ff;
+  background: rgba(255, 255, 255, 0.33);
+  padding: 1.25rem 1.875rem;
+}
+@media screen and (min-width: 75rem) {
+  .header_wrapper .inner_nav .navLinks {
+    padding: 1.25rem 4.375rem;
+    gap: 2.25rem;
+  }
+}
+.header_wrapper .inner_nav .navLinks .navItem .navLink {
+  color: hsl(0, 0%, 100%);
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1rem;
+  transition: all 0.35s ease-in-out;
+}
+.header_wrapper .inner_nav .navLinks .navItem .navLink:hover {
+  color: #7024ec;
+}
+.header_wrapper .inner_nav .navLinks .navItem .navLink.active {
+  color: #7024ec;
+}
+.header_wrapper .inner_nav .cta_btns {
+  gap: 0.5rem;
+}
+@media screen and (min-width: 36rem) {
+  .header_wrapper .inner_nav .cta_btns {
+    gap: 1rem;
+  }
+}
+.header .offcanvas {
+  width: 18.75rem;
+}
+.header .offcanvas .offcanvas-body .mobile_navLinks .navItem {
+  border: 1px solid #dec8ff;
+  background: #dec8ff;
+  padding: 0.5rem 0.3125rem;
+  border-radius: 0.3125rem;
+}
+.header .offcanvas .offcanvas-body .mobile_navLinks .navItem .navLink {
+  color: hsl(0, 0%, 0%);
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1rem;
+  transition: all 0.35s ease-in-out;
+}
+.header .offcanvas .offcanvas-body .mobile_navLinks .navItem .navLink:hover {
+  color: #7024ec;
+}
+.header .offcanvas .offcanvas-body .mobile_navLinks .navItem .navLink.active {
+  color: #7024ec;
 }
 
 @keyframes rotating {
