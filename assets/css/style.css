@@ -9,8 +9,6 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 html:focus-within {
   scroll-behavior: inherit;
@@ -345,6 +343,30 @@ hr {
   color: #de00a5;
 }
 
+.primary_btn {
+  display: inline-flex;
+  padding: 1.0625rem 3.3125rem 1rem 3.3125rem;
+  border-radius: 0.625rem;
+  border: 1.5px solid #ffd2f3;
+  background: #de00a5;
+  box-shadow: 0px 4px 40px 0px rgba(222, 0, 165, 0.35);
+  color: hsl(0, 0%, 100%);
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 125%;
+  transition: all 0.35s ease-in-out;
+}
+@media screen and (min-width: 48rem) {
+  .primary_btn {
+    font-size: 1.25rem;
+  }
+}
+.primary_btn:hover {
+  background: hsl(0, 0%, 100%);
+  color: #de00a5;
+}
+
 input,
 select,
 textarea {
@@ -463,9 +485,15 @@ body {
 }
 
 .header {
-  background: url("../../assets/images/Home/Hero-bg.png") no-repeat;
-  background-size: cover;
-  background-position: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: background-color 0.35s ease;
+}
+.header.scrolled {
+  background-color: rgba(189, 174, 212, 0.8274509804);
 }
 .header_wrapper {
   padding: 1.875rem 0rem;
@@ -478,7 +506,12 @@ body {
   height: 1.875rem;
 }
 .header_wrapper .inner_nav .logo img {
-  width: 8.125rem;
+  width: 6.25rem;
+}
+@media screen and (min-width: 36rem) {
+  .header_wrapper .inner_nav .logo img {
+    width: 8.125rem;
+  }
 }
 @media screen and (min-width: 48rem) {
   .header_wrapper .inner_nav .logo img {
@@ -542,6 +575,101 @@ body {
 }
 .header .offcanvas .offcanvas-body .mobile_navLinks .navItem .navLink.active {
   color: #7024ec;
+}
+
+.hero_section {
+  background: url("../../assets/images/Home/Hero-bg.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.hero_section .hero_wrapper {
+  padding: 11.25rem 0rem 7.8125rem 0rem;
+  overflow-x: hidden;
+}
+@media screen and (min-width: 62rem) {
+  .hero_section .hero_wrapper {
+    padding: 15.625rem 0rem 7.8125rem 0rem;
+  }
+}
+.hero_section .hero_wrapper .Hero_Arrow {
+  top: 3rem;
+  left: -133px;
+}
+@media screen and (min-width: 75rem) {
+  .hero_section .hero_wrapper .Hero_Arrow {
+    left: -223px;
+  }
+}
+.hero_section .hero_wrapper .hero_left_content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.1875rem;
+}
+@media screen and (min-width: 75rem) {
+  .hero_section .hero_wrapper .hero_left_content {
+    gap: 3.5rem;
+  }
+}
+.hero_section .hero_wrapper .hero_left_content .hero_title {
+  max-width: 34.375rem;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 800;
+  line-height: 140%;
+  background: linear-gradient(280deg, #fff 9.23%, #e4d2ff 98.94%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (min-width: 62rem) {
+  .hero_section .hero_wrapper .hero_left_content .hero_title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .hero_section .hero_wrapper .hero_left_content .hero_title {
+    font-size: 3.75rem;
+  }
+}
+.hero_section .hero_wrapper .hero_left_content .hero_description {
+  max-width: 28.375rem;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1.25rem;
+  line-height: 167%;
+  background: radial-gradient(110.79% 110.79% at -5.18% 62.86%, #fff 0%, #ebdefe 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (min-width: 75rem) {
+  .hero_section .hero_wrapper .hero_left_content .hero_description {
+    font-size: 1.5rem;
+  }
+}
+.hero_section .hero_wrapper .hero_right_content {
+  z-index: 1;
+}
+.hero_section .hero_wrapper .hero_right_content .hero_image_wrapper {
+  border-radius: 2.5rem;
+  background: linear-gradient(90deg, #f178c6 1.18%, #edf966 70.17%, #95d7cb 100.03%), rgba(255, 255, 255, 0);
+  padding: 0.9375rem;
+}
+.hero_section .hero_wrapper .hero_right_content .hero_image_wrapper .hero_image {
+  border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero_section .hero_wrapper .hero_right_content .hero_dots_wrapper {
+  right: 0px;
+  bottom: -40px;
+  z-index: -1;
+}
+@media screen and (min-width: 48rem) {
+  .hero_section .hero_wrapper .hero_right_content .hero_dots_wrapper {
+    right: -40px;
+  }
 }
 
 @keyframes rotating {

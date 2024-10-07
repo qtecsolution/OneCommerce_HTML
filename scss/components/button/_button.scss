@@ -42,3 +42,25 @@
     color: $primaryColor;
   }
 }
+
+.primary_btn {
+  display: inline-flex;
+  padding: size(17) size(53) size(16) size(53);
+  @include radius(10);
+  border: 1.5px solid #ffd2f3;
+  background: $primaryColor;
+  box-shadow: 0px 4px 40px 0px rgba(222, 0, 165, 0.35);
+  color: $white;
+  font-family: $primaryfont;
+  font-size: size(16);
+  @include breakpoint(mobile768) {
+    font-size: size(20);
+  }
+  font-weight: 700;
+  line-height: 125%;
+  transition: all 0.35s ease-in-out;
+  &:hover {
+    background: $white;
+    color: $primaryColor;
+  }
+}

@@ -5,10 +5,18 @@ body {
   font-family: $primaryfont;
 }
 
+// HEADER-SECTION-START
 .header {
-  background: url("../../assets/images/Home/Hero-bg.png") no-repeat;
-  background-size: cover;
-  background-position: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: background-color 0.35s ease;
+  &.scrolled {
+    background-color: #bdaed4d3;
+    // background-color: rgb(136, 135, 136);
+  }
   &_wrapper {
     padding: size(30) size(0);
     .inner_nav {
@@ -21,7 +29,10 @@ body {
           height: size(30);
         }
         img {
-          width: size(130);
+          width: size(100);
+          @include breakpoint(mobile576) {
+            width: size(130);
+          }
           @include breakpoint(mobile768) {
             width: size(185);
           }
@@ -89,6 +100,92 @@ body {
             }
           }
         }
+      }
+    }
+  }
+}
+
+// HERO-SECTION-START
+.hero_section {
+  background: url("../../assets/images/Home/Hero-bg.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  .hero_wrapper {
+    padding: size(180) size(0) size(125) size(0);
+    @include breakpoint(tab992) {
+      padding: size(250) size(0) size(125) size(0);
+    }
+    overflow-x: hidden;
+    .Hero_Arrow {
+      top: size(48);
+      left: -133px;
+      @include breakpoint(desktop1200) {
+        left: -223px;
+      }
+    }
+
+    .hero_left_content {
+      display: flex;
+      flex-direction: column;
+      gap: size(35);
+      @include breakpoint(desktop1200) {
+        gap: size(56);
+      }
+
+      .hero_title {
+        max-width: size(550);
+        font-family: $primaryfont;
+        font-size: size(30);
+        @include breakpoint(tab992) {
+          font-size: size(40);
+        }
+        @include breakpoint(desktop1200) {
+          font-size: size(60);
+        }
+        font-weight: 800;
+        line-height: 140%;
+        background: linear-gradient(280deg, #fff 9.23%, #e4d2ff 98.94%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero_description {
+        max-width: size(454);
+        font-family: $primaryfont;
+        font-size: size(20);
+        @include breakpoint(desktop1200) {
+          font-size: size(24);
+        }
+        line-height: 167%;
+        background: radial-gradient(110.79% 110.79% at -5.18% 62.86%, #fff 0%, #ebdefe 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .hero_right_content {
+      z-index: 1;
+      .hero_image_wrapper {
+        @include radius(40);
+        background: linear-gradient(90deg, #f178c6 1.18%, #edf966 70.17%, #95d7cb 100.03%),
+          rgba(255, 255, 255, 0);
+        padding: size(15);
+        .hero_image {
+          @include radius(32);
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .hero_dots_wrapper {
+        right: 0px;
+        @include breakpoint(mobile768) {
+          right: -40px;
+        }
+        bottom: -40px;
+        z-index: -1;
       }
     }
   }

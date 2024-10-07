@@ -4,8 +4,8 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+  // overflow-x: hidden;
+  // scroll-behavior: smooth;
 
   &:focus-within {
     scroll-behavior: inherit;
