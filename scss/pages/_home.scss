@@ -196,7 +196,10 @@ body {
 
 // OUR-SERVICES-START
 .our_services {
-  margin-top: size(140);
+  margin-top: size(70);
+  @include breakpoint(mobile768) {
+    margin-top: size(140);
+  }
   &_wrapper {
     .service_item {
       display: flex;
@@ -312,6 +315,7 @@ body {
 }
 
 .section_image_content {
+  overflow-x: hidden;
   &.upload_product {
     margin-top: size(70);
     @include breakpoint(mobile768) {
@@ -371,6 +375,92 @@ body {
       font-size: size(16);
       line-height: size(31);
       max-width: size(562);
+    }
+  }
+}
+
+// order_section
+.order_section {
+  padding-top: size(70);
+  @include breakpoint(mobile768) {
+    padding-top: size(140);
+  }
+  &_wrapper {
+    .order {
+      left: size(0);
+      bottom: size(-10);
+      svg {
+        width: size(60);
+        @include breakpoint(mobile576) {
+          width: size(80);
+        }
+      }
+    }
+  }
+}
+
+// domain_section
+.domain_section {
+  padding-top: size(70);
+  @include breakpoint(mobile768) {
+    padding-top: size(140);
+  }
+  &_wrapper {
+    .domain_arrow {
+      left: size(75);
+      @include breakpoint(mobile576) {
+        left: size(90);
+      }
+      bottom: size(-10);
+      svg {
+        width: size(70);
+        @include breakpoint(mobile576) {
+          width: size(102);
+        }
+      }
+    }
+  }
+}
+
+.payment_section {
+  padding-top: size(70);
+  @include breakpoint(mobile768) {
+    padding-top: size(140);
+  }
+  &_wrapper {
+    .payment_arrow {
+      left: size(110);
+      @include breakpoint(mobile576) {
+        left: size(143);
+      }
+      bottom: size(-10);
+      svg {
+        width: size(70);
+        @include breakpoint(mobile576) {
+          width: size(83);
+        }
+      }
+    }
+  }
+}
+.free_plan_section {
+  padding-top: size(70);
+  @include breakpoint(mobile768) {
+    padding-top: size(140);
+  }
+  &_wrapper {
+    .free_plan_arrow {
+      left: size(80);
+      @include breakpoint(mobile576) {
+        left: size(108);
+      }
+      bottom: size(-10);
+      svg {
+        width: size(80);
+        @include breakpoint(mobile576) {
+          width: size(104);
+        }
+      }
     }
   }
 }

@@ -677,7 +677,12 @@ body {
 }
 
 .our_services {
-  margin-top: 8.75rem;
+  margin-top: 4.375rem;
+}
+@media screen and (min-width: 48rem) {
+  .our_services {
+    margin-top: 8.75rem;
+  }
 }
 .our_services_wrapper .service_item {
   display: flex;
@@ -789,6 +794,9 @@ body {
   margin: 0 auto;
 }
 
+.section_image_content {
+  overflow-x: hidden;
+}
 .section_image_content.upload_product {
   margin-top: 4.375rem;
 }
@@ -854,6 +862,105 @@ body {
   font-size: 1rem;
   line-height: 1.9375rem;
   max-width: 35.125rem;
+}
+
+.order_section {
+  padding-top: 4.375rem;
+}
+@media screen and (min-width: 48rem) {
+  .order_section {
+    padding-top: 8.75rem;
+  }
+}
+.order_section_wrapper .order {
+  left: 0rem;
+  bottom: -0.625rem;
+}
+.order_section_wrapper .order svg {
+  width: 3.75rem;
+}
+@media screen and (min-width: 36rem) {
+  .order_section_wrapper .order svg {
+    width: 5rem;
+  }
+}
+
+.domain_section {
+  padding-top: 4.375rem;
+}
+@media screen and (min-width: 48rem) {
+  .domain_section {
+    padding-top: 8.75rem;
+  }
+}
+.domain_section_wrapper .domain_arrow {
+  left: 4.6875rem;
+  bottom: -0.625rem;
+}
+@media screen and (min-width: 36rem) {
+  .domain_section_wrapper .domain_arrow {
+    left: 5.625rem;
+  }
+}
+.domain_section_wrapper .domain_arrow svg {
+  width: 4.375rem;
+}
+@media screen and (min-width: 36rem) {
+  .domain_section_wrapper .domain_arrow svg {
+    width: 6.375rem;
+  }
+}
+
+.payment_section {
+  padding-top: 4.375rem;
+}
+@media screen and (min-width: 48rem) {
+  .payment_section {
+    padding-top: 8.75rem;
+  }
+}
+.payment_section_wrapper .payment_arrow {
+  left: 6.875rem;
+  bottom: -0.625rem;
+}
+@media screen and (min-width: 36rem) {
+  .payment_section_wrapper .payment_arrow {
+    left: 8.9375rem;
+  }
+}
+.payment_section_wrapper .payment_arrow svg {
+  width: 4.375rem;
+}
+@media screen and (min-width: 36rem) {
+  .payment_section_wrapper .payment_arrow svg {
+    width: 5.1875rem;
+  }
+}
+
+.free_plan_section {
+  padding-top: 4.375rem;
+}
+@media screen and (min-width: 48rem) {
+  .free_plan_section {
+    padding-top: 8.75rem;
+  }
+}
+.free_plan_section_wrapper .free_plan_arrow {
+  left: 5rem;
+  bottom: -0.625rem;
+}
+@media screen and (min-width: 36rem) {
+  .free_plan_section_wrapper .free_plan_arrow {
+    left: 6.75rem;
+  }
+}
+.free_plan_section_wrapper .free_plan_arrow svg {
+  width: 5rem;
+}
+@media screen and (min-width: 36rem) {
+  .free_plan_section_wrapper .free_plan_arrow svg {
+    width: 6.5rem;
+  }
 }
 
 @keyframes rotating {
