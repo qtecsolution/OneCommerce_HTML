@@ -116,6 +116,9 @@ body {
       padding: size(250) size(0) size(125) size(0);
     }
     overflow-x: hidden;
+    @include breakpoint(mobile576) {
+      overflow-x: visible;
+    }
     .Hero_Arrow {
       top: size(48);
       left: -133px;
@@ -186,6 +189,57 @@ body {
         }
         bottom: -40px;
         z-index: -1;
+      }
+    }
+  }
+}
+
+// OUR-SERVICES-START
+.our_services {
+  margin: size(140) 0;
+  &_wrapper {
+    .service_item {
+      display: flex;
+      align-items: center;
+      gap: size(10);
+      padding: size(20) size(10) size(20) size(20);
+      @include breakpoint(desktop1200) {
+        padding: size(30) size(30) size(30) size(30);
+        gap: size(20);
+      }
+      border: 1px dashed #de00a5;
+      @include radius(16);
+      .service_image_wrapper {
+        img {
+          width: 100%;
+          @include radius(16);
+        }
+      }
+      .service_content {
+        display: flex;
+        flex-direction: column;
+        gap: size(14);
+
+        .service_title {
+          color: #1a0013;
+          font-family: $primaryfont;
+          font-size: 16px;
+          @include breakpoint(desktop1200) {
+            font-size: 20px;
+          }
+          @include breakpoint(desktop1400) {
+            font-size: 24px;
+          }
+          font-weight: 700;
+          line-height: 90%;
+        }
+        .service_description {
+          color: #52474f;
+          font-family: $primaryfont;
+          font-size: size(14);
+          line-height: 167%;
+          max-width: size(230);
+        }
       }
     }
   }

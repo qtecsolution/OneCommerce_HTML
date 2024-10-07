@@ -591,6 +591,11 @@ body {
     padding: 15.625rem 0rem 7.8125rem 0rem;
   }
 }
+@media screen and (min-width: 36rem) {
+  .hero_section .hero_wrapper {
+    overflow-x: visible;
+  }
+}
 .hero_section .hero_wrapper .Hero_Arrow {
   top: 3rem;
   left: -133px;
@@ -670,6 +675,57 @@ body {
   .hero_section .hero_wrapper .hero_right_content .hero_dots_wrapper {
     right: -40px;
   }
+}
+
+.our_services {
+  margin: 8.75rem 0;
+}
+.our_services_wrapper .service_item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1.25rem 0.625rem 1.25rem 1.25rem;
+  border: 1px dashed #de00a5;
+  border-radius: 1rem;
+}
+@media screen and (min-width: 75rem) {
+  .our_services_wrapper .service_item {
+    padding: 1.875rem 1.875rem 1.875rem 1.875rem;
+    gap: 1.25rem;
+  }
+}
+.our_services_wrapper .service_item .service_image_wrapper img {
+  width: 100%;
+  border-radius: 1rem;
+}
+.our_services_wrapper .service_item .service_content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+.our_services_wrapper .service_item .service_content .service_title {
+  color: #1a0013;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 90%;
+}
+@media screen and (min-width: 75rem) {
+  .our_services_wrapper .service_item .service_content .service_title {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .our_services_wrapper .service_item .service_content .service_title {
+    font-size: 24px;
+  }
+}
+.our_services_wrapper .service_item .service_content .service_description {
+  color: #52474f;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 0.875rem;
+  line-height: 167%;
+  max-width: 14.375rem;
 }
 
 @keyframes rotating {
