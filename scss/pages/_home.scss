@@ -398,7 +398,85 @@ body {
     }
   }
 }
+// CHOOSING-TEMPLATE-SECTION-START
+.choosing_template {
+  &_wrapper {
+    background-image: url("../../assets/images/Home/choosing_template_bg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: size(50) size(15);
 
+    @include breakpoint(tab992) {
+      padding: size(100) size(40);
+    }
+    @include radius(24);
+    .choosing_template_header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: size(24);
+      .title_wrapper {
+        .title {
+          color: #1a0013;
+          font-family: $primaryfont;
+          font-size: size(32);
+          font-weight: 700;
+        }
+        .title_arrow {
+          width: size(104);
+          left: size(80);
+          bottom: size(-10);
+        }
+      }
+      .description {
+        color: #52474f;
+        text-align: center;
+        font-family: $primaryfont;
+        font-size: size(16);
+        line-height: size(31);
+        max-width: size(1144);
+      }
+    }
+
+    .choosing_template_content {
+      margin-top: size(25);
+      margin-bottom: size(50);
+      @include breakpoint(tab992) {
+        margin-top: size(55);
+        margin-bottom: size(100);
+      }
+      .template_card {
+        display: block;
+        .template_image {
+          width: 100%;
+          @include radius(12);
+          @include breakpoint(mobile768) {
+            @include radius(24);
+          }
+        }
+        .template_title {
+          background: #7024ec;
+          color: $white;
+          text-align: center;
+          font-family: $primaryfont;
+          font-size: size(16);
+          font-weight: 600;
+          padding: size(18) size(0) size(14) size(0);
+
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          @include double-radius(bottom, right, 12, bottom, left, 12);
+          @include breakpoint(mobile768) {
+            @include double-radius(bottom, right, 24, bottom, left, 24);
+          }
+        }
+      }
+    }
+  }
+}
 // domain_section
 .domain_section {
   padding-top: size(70);
@@ -421,6 +499,7 @@ body {
     }
   }
 }
+
 // payment_section
 .payment_section {
   padding-top: size(70);
@@ -443,6 +522,7 @@ body {
     }
   }
 }
+
 // free_plan_section
 .free_plan_section {
   padding-top: size(70);
@@ -468,6 +548,16 @@ body {
 
 // PROCESS-SECTION-START
 .process_section {
+  background: linear-gradient(
+    180deg,
+    rgba(237, 217, 255, 0) 0%,
+    rgba(237, 217, 255, 0.65) 15%,
+    rgba(237, 217, 255, 0) 50%
+  );
+  // padding-top: size(120);
+  @include breakpoint(tab992) {
+    padding-top: size(120);
+  }
   &_wrapper {
     .process_section_header {
       display: flex;
@@ -513,6 +603,171 @@ body {
         text-align: center;
         font-family: $primaryfont;
         font-size: size(20);
+      }
+    }
+
+    .process_section_content {
+      margin-top: size(60);
+      @include radius(24);
+      background: linear-gradient(180deg, #6523e3 26.78%, #c11795 159.21%);
+      // @include breakpoint(desktop1200) {
+      padding: size(50) size(30);
+      // }
+      @include breakpoint(desktop1400) {
+        padding: size(50) size(40);
+      }
+      .process_card {
+        @include radius(16);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.2);
+        padding: size(34) size(23);
+        display: flex;
+        align-items: center;
+        gap: size(22);
+        height: 100%;
+        .icon_wrapper {
+          svg {
+            width: size(40);
+            height: size(40);
+          }
+        }
+        .sub_title {
+          color: $white;
+          font-family: $primaryfont;
+          font-size: size(14);
+          font-weight: 700;
+          line-height: 150%;
+          @include breakpoint(desktop1400) {
+            font-size: size(16);
+          }
+        }
+        .description {
+          color: $white;
+          font-family: $primaryfont;
+          font-size: size(12);
+          line-height: 167%;
+          max-width: size(277);
+          @include breakpoint(desktop1400) {
+            font-size: size(14);
+          }
+        }
+      }
+    }
+  }
+}
+
+// FACILITIES-SECTION-START
+.facilities_section {
+  background: linear-gradient(
+    180deg,
+    rgba(217, 245, 247, 0) 0%,
+    rgba(217, 245, 247, 0.5) 15%,
+    rgba(217, 245, 247, 0) 50%
+  );
+  padding: size(120) size(0);
+  @include breakpoint(tab992) {
+    padding: size(120) size(0);
+  }
+  &_wrapper {
+    .facilities_section_header {
+      display: flex;
+      flex-direction: column;
+      gap: size(38);
+
+      .process_section_title {
+        display: flex;
+        gap: size(12);
+        padding: size(5) size(21);
+        justify-content: center;
+        align-items: center;
+        @include radius(8);
+        border: 1px solid #fd1774;
+
+        svg {
+          width: size(10);
+          height: size(10);
+        }
+        .sub_title {
+          color: #fd1774;
+          font-family: $primaryfont;
+          font-size: size(20);
+          font-weight: 500;
+          margin-top: size(6);
+        }
+      }
+      .title {
+        color: #1a0013;
+        text-align: center;
+        font-family: $primaryfont;
+        font-size: size(28);
+        @include breakpoint(mobile768) {
+          font-size: size(42);
+        }
+        font-weight: 700;
+        span {
+          color: #7024ec;
+        }
+      }
+      .description {
+        color: #52474f;
+        text-align: center;
+        font-family: $primaryfont;
+        font-size: size(20);
+      }
+    }
+
+    .facilities_content {
+      z-index: 2;
+      margin-top: size(60);
+      .process_section_bg {
+        width: 100%;
+        height: size(462);
+        border-radius: 24px;
+        background: #e5faff;
+        background-blend-mode: color-burn;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05) inset;
+        bottom: 68px;
+        left: 0;
+        z-index: -1;
+      }
+      .facilities_card_inner {
+        padding: 0 size(40);
+      }
+      .facilities_card {
+        border-radius: 24px;
+        background: #fff;
+        box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.06);
+        padding: size(47) size(27);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: size(30);
+        height: 100%;
+        .icon_wrapper {
+          svg {
+            width: size(80);
+            height: size(80);
+          }
+        }
+        .sub_title {
+          color: var(--, #1a0013);
+          font-family: "Baloo Da 2";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-align: center;
+        }
+        .description {
+          color: var(--, #52474f);
+          text-align: center;
+          font-family: "Baloo Da 2";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 27px; /* 192.857% */
+          max-width: size(330);
+        }
       }
     }
   }

@@ -885,6 +885,88 @@ body {
   }
 }
 
+.choosing_template_wrapper {
+  background-image: url("../../assets/images/Home/choosing_template_bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 3.125rem 0.9375rem;
+  border-radius: 1.5rem;
+}
+@media screen and (min-width: 62rem) {
+  .choosing_template_wrapper {
+    padding: 6.25rem 2.5rem;
+  }
+}
+.choosing_template_wrapper .choosing_template_header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.choosing_template_wrapper .choosing_template_header .title_wrapper .title {
+  color: #1a0013;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.choosing_template_wrapper .choosing_template_header .title_wrapper .title_arrow {
+  width: 6.5rem;
+  left: 5rem;
+  bottom: -0.625rem;
+}
+.choosing_template_wrapper .choosing_template_header .description {
+  color: #52474f;
+  text-align: center;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1rem;
+  line-height: 1.9375rem;
+  max-width: 71.5rem;
+}
+.choosing_template_wrapper .choosing_template_content {
+  margin-top: 1.5625rem;
+  margin-bottom: 3.125rem;
+}
+@media screen and (min-width: 62rem) {
+  .choosing_template_wrapper .choosing_template_content {
+    margin-top: 3.4375rem;
+    margin-bottom: 6.25rem;
+  }
+}
+.choosing_template_wrapper .choosing_template_content .template_card {
+  display: block;
+}
+.choosing_template_wrapper .choosing_template_content .template_card .template_image {
+  width: 100%;
+  border-radius: 0.75rem;
+}
+@media screen and (min-width: 48rem) {
+  .choosing_template_wrapper .choosing_template_content .template_card .template_image {
+    border-radius: 1.5rem;
+  }
+}
+.choosing_template_wrapper .choosing_template_content .template_card .template_title {
+  background: #7024ec;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1.125rem 0rem 0.875rem 0rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-bottom-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+}
+@media screen and (min-width: 48rem) {
+  .choosing_template_wrapper .choosing_template_content .template_card .template_title {
+    border-bottom-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+  }
+}
+
 .domain_section {
   padding-top: 4.375rem;
 }
@@ -963,6 +1045,14 @@ body {
   }
 }
 
+.process_section {
+  background: linear-gradient(180deg, rgba(237, 217, 255, 0) 0%, rgba(237, 217, 255, 0.65) 15%, rgba(237, 217, 255, 0) 50%);
+}
+@media screen and (min-width: 62rem) {
+  .process_section {
+    padding-top: 7.5rem;
+  }
+}
 .process_section_wrapper .process_section_header {
   display: flex;
   flex-direction: column;
@@ -1008,6 +1098,163 @@ body {
   text-align: center;
   font-family: "Baloo Da 2", sans-serif;
   font-size: 1.25rem;
+}
+.process_section_wrapper .process_section_content {
+  margin-top: 3.75rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, #6523e3 26.78%, #c11795 159.21%);
+  padding: 3.125rem 1.875rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .process_section_wrapper .process_section_content {
+    padding: 3.125rem 2.5rem;
+  }
+}
+.process_section_wrapper .process_section_content .process_card {
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2.125rem 1.4375rem;
+  display: flex;
+  align-items: center;
+  gap: 1.375rem;
+  height: 100%;
+}
+.process_section_wrapper .process_section_content .process_card .icon_wrapper svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.process_section_wrapper .process_section_content .process_card .sub_title {
+  color: hsl(0, 0%, 100%);
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 150%;
+}
+@media screen and (min-width: 87.5rem) {
+  .process_section_wrapper .process_section_content .process_card .sub_title {
+    font-size: 1rem;
+  }
+}
+.process_section_wrapper .process_section_content .process_card .description {
+  color: hsl(0, 0%, 100%);
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 0.75rem;
+  line-height: 167%;
+  max-width: 17.3125rem;
+}
+@media screen and (min-width: 87.5rem) {
+  .process_section_wrapper .process_section_content .process_card .description {
+    font-size: 0.875rem;
+  }
+}
+
+.facilities_section {
+  background: linear-gradient(180deg, rgba(217, 245, 247, 0) 0%, rgba(217, 245, 247, 0.5) 15%, rgba(217, 245, 247, 0) 50%);
+  padding: 7.5rem 0rem;
+}
+@media screen and (min-width: 62rem) {
+  .facilities_section {
+    padding: 7.5rem 0rem;
+  }
+}
+.facilities_section_wrapper .facilities_section_header {
+  display: flex;
+  flex-direction: column;
+  gap: 2.375rem;
+}
+.facilities_section_wrapper .facilities_section_header .process_section_title {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.3125rem 1.3125rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid #fd1774;
+}
+.facilities_section_wrapper .facilities_section_header .process_section_title svg {
+  width: 0.625rem;
+  height: 0.625rem;
+}
+.facilities_section_wrapper .facilities_section_header .process_section_title .sub_title {
+  color: #fd1774;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 0.375rem;
+}
+.facilities_section_wrapper .facilities_section_header .title {
+  color: #1a0013;
+  text-align: center;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 48rem) {
+  .facilities_section_wrapper .facilities_section_header .title {
+    font-size: 2.625rem;
+  }
+}
+.facilities_section_wrapper .facilities_section_header .title span {
+  color: #7024ec;
+}
+.facilities_section_wrapper .facilities_section_header .description {
+  color: #52474f;
+  text-align: center;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1.25rem;
+}
+.facilities_section_wrapper .facilities_content {
+  z-index: 2;
+  margin-top: 3.75rem;
+}
+.facilities_section_wrapper .facilities_content .process_section_bg {
+  width: 100%;
+  height: 28.875rem;
+  border-radius: 24px;
+  background: #e5faff;
+  background-blend-mode: color-burn;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05) inset;
+  bottom: 68px;
+  left: 0;
+  z-index: -1;
+}
+.facilities_section_wrapper .facilities_content .facilities_card_inner {
+  padding: 0 2.5rem;
+}
+.facilities_section_wrapper .facilities_content .facilities_card {
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.06);
+  padding: 2.9375rem 1.6875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875rem;
+  height: 100%;
+}
+.facilities_section_wrapper .facilities_content .facilities_card .icon_wrapper svg {
+  width: 5rem;
+  height: 5rem;
+}
+.facilities_section_wrapper .facilities_content .facilities_card .sub_title {
+  color: var(--, #1a0013);
+  font-family: "Baloo Da 2";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+.facilities_section_wrapper .facilities_content .facilities_card .description {
+  color: var(--, #52474f);
+  text-align: center;
+  font-family: "Baloo Da 2";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 192.857% */
+  max-width: 20.625rem;
 }
 
 @keyframes rotating {
