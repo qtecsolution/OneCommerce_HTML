@@ -947,3 +947,124 @@ body {
     }
   }
 }
+// QUESTIONS-SECTION-START
+.questions_section {
+  background: linear-gradient(
+    180deg,
+    rgba(254, 220, 234, 0) 0%,
+    rgba(254, 220, 234, 0.65) 15%,
+    rgba(254, 220, 234, 0) 50%
+  );
+  padding: size(120) size(0);
+  @include breakpoint(tab992) {
+    padding: size(120) size(0);
+  }
+  &_wrapper {
+    .questions_section_header {
+      display: flex;
+      flex-direction: column;
+      gap: size(38);
+
+      .questions_section_title {
+        display: flex;
+        gap: size(12);
+        padding: size(5) size(21);
+        justify-content: center;
+        align-items: center;
+        @include radius(8);
+        border: 1px solid #de00a5;
+
+        svg {
+          width: size(10);
+          height: size(10);
+        }
+        .sub_title {
+          color: #de00a5;
+          font-family: $primaryfont;
+          font-size: size(20);
+          font-weight: 500;
+          margin-top: size(6);
+        }
+      }
+      .title {
+        color: #1a0013;
+        text-align: center;
+        font-family: $primaryfont;
+        font-size: size(28);
+        @include breakpoint(mobile768) {
+          font-size: size(42);
+        }
+        font-weight: 700;
+        span {
+          color: #7024ec;
+        }
+      }
+      .description {
+        color: #52474f;
+        text-align: center;
+        font-family: $primaryfont;
+        font-size: size(20);
+      }
+    }
+    .questions_section_content {
+      margin-top: size(60);
+      .accordion {
+        .accordion-item {
+          margin-bottom: size(36);
+          @include radius(16);
+          border: 0.25px solid #efefef;
+          background: #fff;
+          box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.06);
+
+          .accordion-header {
+            .accordion-button {
+              color: #1a0013;
+              font-family: $primaryfont;
+              font-size: size(20);
+              @include breakpoint(mobile768) {
+                font-size: size(30);
+              }
+              font-weight: 600;
+              @include radius(16);
+
+              &:not(.collapsed) {
+                background-color: #fff;
+                box-shadow: none;
+              }
+
+              &:focus {
+                box-shadow: none;
+              }
+            }
+          }
+
+          .accordion-button:not(.collapsed) {
+            border-radius: 0;
+            @include double-radius(top, right, 16, top, left, 16);
+            border: 1px solid #de00a5;
+            border-bottom: none;
+            box-shadow: 0px 6px 16px 0px rgba(222, 0, 165, 0.19);
+          }
+
+          .accordion-collapse.show {
+            @include double-radius(bottom, right, 16, bottom, left, 16);
+            border: 1px solid #de00a5;
+            border-top: none;
+            box-shadow: 0px 6px 16px 0px rgba(222, 0, 165, 0.19);
+          }
+
+          .accordion-collapse {
+            .accordion-body {
+              color: #52474f;
+              font-family: $primaryfont;
+              font-size: size(16);
+              @include breakpoint(mobile768) {
+                font-size: size(20);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

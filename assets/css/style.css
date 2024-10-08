@@ -1438,6 +1438,116 @@ body {
   font-size: 14px;
 }
 
+.questions_section {
+  background: linear-gradient(180deg, rgba(254, 220, 234, 0) 0%, rgba(254, 220, 234, 0.65) 15%, rgba(254, 220, 234, 0) 50%);
+  padding: 7.5rem 0rem;
+}
+@media screen and (min-width: 62rem) {
+  .questions_section {
+    padding: 7.5rem 0rem;
+  }
+}
+.questions_section_wrapper .questions_section_header {
+  display: flex;
+  flex-direction: column;
+  gap: 2.375rem;
+}
+.questions_section_wrapper .questions_section_header .questions_section_title {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.3125rem 1.3125rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid #de00a5;
+}
+.questions_section_wrapper .questions_section_header .questions_section_title svg {
+  width: 0.625rem;
+  height: 0.625rem;
+}
+.questions_section_wrapper .questions_section_header .questions_section_title .sub_title {
+  color: #de00a5;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 0.375rem;
+}
+.questions_section_wrapper .questions_section_header .title {
+  color: #1a0013;
+  text-align: center;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 48rem) {
+  .questions_section_wrapper .questions_section_header .title {
+    font-size: 2.625rem;
+  }
+}
+.questions_section_wrapper .questions_section_header .title span {
+  color: #7024ec;
+}
+.questions_section_wrapper .questions_section_header .description {
+  color: #52474f;
+  text-align: center;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1.25rem;
+}
+.questions_section_wrapper .questions_section_content {
+  margin-top: 3.75rem;
+}
+.questions_section_wrapper .questions_section_content .accordion .accordion-item {
+  margin-bottom: 2.25rem;
+  border-radius: 1rem;
+  border: 0.25px solid #efefef;
+  background: #fff;
+  box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.06);
+}
+.questions_section_wrapper .questions_section_content .accordion .accordion-item .accordion-header .accordion-button {
+  color: #1a0013;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .questions_section_wrapper .questions_section_content .accordion .accordion-item .accordion-header .accordion-button {
+    font-size: 1.875rem;
+  }
+}
+.questions_section_wrapper .questions_section_content .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+  background-color: #fff;
+  box-shadow: none;
+}
+.questions_section_wrapper .questions_section_content .accordion .accordion-item .accordion-header .accordion-button:focus {
+  box-shadow: none;
+}
+.questions_section_wrapper .questions_section_content .accordion .accordion-item .accordion-button:not(.collapsed) {
+  border-radius: 0;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border: 1px solid #de00a5;
+  border-bottom: none;
+  box-shadow: 0px 6px 16px 0px rgba(222, 0, 165, 0.19);
+}
+.questions_section_wrapper .questions_section_content .accordion .accordion-item .accordion-collapse.show {
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border: 1px solid #de00a5;
+  border-top: none;
+  box-shadow: 0px 6px 16px 0px rgba(222, 0, 165, 0.19);
+}
+.questions_section_wrapper .questions_section_content .accordion .accordion-item .accordion-collapse .accordion-body {
+  color: #52474f;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .questions_section_wrapper .questions_section_content .accordion .accordion-item .accordion-collapse .accordion-body {
+    font-size: 1.25rem;
+  }
+}
+
 @keyframes rotating {
   from {
     transform: rotate(0deg);
