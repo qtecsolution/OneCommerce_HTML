@@ -342,6 +342,30 @@ hr {
   color: #de00a5;
 }
 
+.plan_button {
+  display: inline-flex;
+  font-size: 0.75rem;
+  padding: 0.625rem 0.625rem 0.5rem 0.625rem;
+  border-radius: 0.625rem;
+  background: #de00a5;
+  color: hsl(0, 0%, 100%);
+  font-family: "Baloo Da 2", sans-serif;
+  font-weight: 500;
+  line-height: 125%;
+  transition: all 0.35s ease-in-out;
+  border: #de00a5 1px solid;
+}
+@media screen and (min-width: 48rem) {
+  .plan_button {
+    padding: 0.8125rem 1.5625rem 0.75rem 1.5625rem;
+    font-size: 1.125rem;
+  }
+}
+.plan_button:hover {
+  background: hsl(0, 0%, 100%);
+  color: #de00a5;
+}
+
 .primary_btn {
   display: inline-flex;
   padding: 1.0625rem 3.3125rem 1rem 3.3125rem;
@@ -1239,7 +1263,7 @@ body {
 }
 .facilities_section_wrapper .facilities_content .facilities_card .sub_title {
   color: var(--, #1a0013);
-  font-family: "Baloo Da 2";
+  font-family: "Baloo Da 2", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -1249,12 +1273,169 @@ body {
 .facilities_section_wrapper .facilities_content .facilities_card .description {
   color: var(--, #52474f);
   text-align: center;
-  font-family: "Baloo Da 2";
+  font-family: "Baloo Da 2", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 27px; /* 192.857% */
   max-width: 20.625rem;
+}
+
+.price_section {
+  background: linear-gradient(180deg, rgba(219, 253, 197, 0) 0%, rgba(219, 253, 197, 0.65) 15%, rgba(219, 253, 197, 0) 50%);
+}
+.price_section_wrapper .price_section_header {
+  display: flex;
+  flex-direction: column;
+  gap: 2.375rem;
+}
+.price_section_wrapper .price_section_header .process_section_title {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.3125rem 1.3125rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid #64d71f;
+}
+.price_section_wrapper .price_section_header .process_section_title svg {
+  width: 0.625rem;
+  height: 0.625rem;
+}
+.price_section_wrapper .price_section_header .process_section_title .sub_title {
+  color: #64d71f;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 0.375rem;
+}
+.price_section_wrapper .price_section_header .title {
+  color: #1a0013;
+  text-align: center;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 48rem) {
+  .price_section_wrapper .price_section_header .title {
+    font-size: 2.625rem;
+  }
+}
+.price_section_wrapper .price_section_header .title span {
+  color: #7024ec;
+}
+.price_section_wrapper .price_section_header .description {
+  color: #52474f;
+  text-align: center;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1.25rem;
+}
+.price_section_wrapper .price_section_content .nav-tabs {
+  border-bottom: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.75rem;
+}
+.price_section_wrapper .price_section_content .nav-tabs .inner_tabs {
+  border-radius: 3.0625rem;
+  background: linear-gradient(0deg, #f5f7fa 0%, #f5f7fa 100%), linear-gradient(0deg, #f5f7fa 0%, #f5f7fa 100%), #f5f7fa;
+  padding: 0.3125rem;
+}
+.price_section_wrapper .price_section_content .nav-tabs .monthly {
+  color: #52474f;
+  text-align: center;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 1.25rem;
+  padding: 1.1875rem 2.0625rem 1rem 2.0625rem;
+  border: none;
+  font-weight: 500;
+  border-radius: 3.0625rem;
+  background: transparent;
+}
+.price_section_wrapper .price_section_content .nav-tabs .monthly.active {
+  background: #fff;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+  font-weight: 600;
+}
+.price_section_wrapper .price_section_content .tab-content .price_section_card_inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875rem;
+  margin-top: 2.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .price_section_wrapper .price_section_content .tab-content .price_section_card_inner {
+    align-items: start;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+.price_section_wrapper .price_section_content .tab-content .price_section_card_inner .price_card {
+  max-width: 21.9375rem;
+  width: 100%;
+}
+.price_section_wrapper .price_section_content .tab-content .price_section_card_inner .price_section_card {
+  border-radius: 24px;
+  border: 1px solid var(--secondary, #7024ec);
+  background: var(--Neutral-100, #fff);
+  padding: 2rem;
+}
+.price_section_wrapper .price_section_content .tab-content .price_section_card_inner .price_section_card_header .plan {
+  border-radius: 6px;
+  background: #f4eeff;
+  color: #7024ec;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0.4375rem 0.9375rem 0.0625rem 0.9375rem;
+}
+.price_section_wrapper .price_section_content .tab-content .price_section_card_inner .price_section_card_header .plan_price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.625rem 0;
+  margin-left: 0.75rem;
+  border-bottom: 1px solid #f4eeff;
+}
+.price_section_wrapper .price_section_content .tab-content .price_section_card_inner .price_section_card_header .plan_price .title {
+  color: #1a0013;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 60px;
+}
+.price_section_wrapper .price_section_content .tab-content .price_section_card_inner .price_section_card_header .plan_price .sub_title {
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.558px;
+  background: linear-gradient(90deg, #6523e3 5.7%, #c11795 99.89%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.price_section_wrapper .price_section_content .tab-content .price_section_card_inner .price_section_card_list {
+  padding: 1.875rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.price_section_wrapper .price_section_content .tab-content .price_section_card_inner .price_section_card_list .item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.price_section_wrapper .price_section_content .tab-content .price_section_card_inner .price_section_card_list .item .icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.price_section_wrapper .price_section_content .tab-content .price_section_card_inner .price_section_card_list .item .text {
+  margin-top: 0.25rem;
+  color: #52474f;
+  font-family: "Baloo Da 2", sans-serif;
+  font-size: 14px;
 }
 
 @keyframes rotating {

@@ -751,7 +751,7 @@ body {
         }
         .sub_title {
           color: var(--, #1a0013);
-          font-family: "Baloo Da 2";
+          font-family: $primaryfont;
           font-size: 20px;
           font-style: normal;
           font-weight: 700;
@@ -761,12 +761,187 @@ body {
         .description {
           color: var(--, #52474f);
           text-align: center;
-          font-family: "Baloo Da 2";
+          font-family: $primaryfont;
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
           line-height: 27px; /* 192.857% */
           max-width: size(330);
+        }
+      }
+    }
+  }
+}
+// PRICE-SECTION-START
+
+.price_section {
+  background: linear-gradient(
+    180deg,
+    rgba(219, 253, 197, 0) 0%,
+    rgba(219, 253, 197, 0.65) 15%,
+    rgba(219, 253, 197, 0) 50%
+  );
+  &_wrapper {
+    .price_section_header {
+      display: flex;
+      flex-direction: column;
+      gap: size(38);
+
+      .process_section_title {
+        display: flex;
+        gap: size(12);
+        padding: size(5) size(21);
+        justify-content: center;
+        align-items: center;
+        @include radius(8);
+        border: 1px solid #64d71f;
+
+        svg {
+          width: size(10);
+          height: size(10);
+        }
+        .sub_title {
+          color: #64d71f;
+          font-family: $primaryfont;
+          font-size: size(20);
+          font-weight: 500;
+          margin-top: size(6);
+        }
+      }
+      .title {
+        color: #1a0013;
+        text-align: center;
+        font-family: $primaryfont;
+        font-size: size(28);
+        @include breakpoint(mobile768) {
+          font-size: size(42);
+        }
+        font-weight: 700;
+        span {
+          color: #7024ec;
+        }
+      }
+      .description {
+        color: #52474f;
+        text-align: center;
+        font-family: $primaryfont;
+        font-size: size(20);
+      }
+    }
+
+    .price_section_content {
+      .nav-tabs {
+        border-bottom: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: size(60);
+        .inner_tabs {
+          @include radius(49);
+          background: linear-gradient(0deg, #f5f7fa 0%, #f5f7fa 100%),
+            linear-gradient(0deg, #f5f7fa 0%, #f5f7fa 100%), #f5f7fa;
+          padding: size(5);
+        }
+        .monthly {
+          color: #52474f;
+          text-align: center;
+          font-family: $primaryfont;
+          font-size: size(20);
+          padding: size(19) size(33) size(16) size(33);
+          border: none;
+          font-weight: 500;
+          @include radius(49);
+          background: transparent;
+          &.active {
+            background: #fff;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+            font-weight: 600;
+          }
+        }
+      }
+
+      .tab-content {
+        .price_section_card_inner {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          @include breakpoint(mobile768) {
+            align-items: start;
+            justify-content: center;
+            flex-direction: row;
+          }
+          gap: size(30);
+          margin-top: size(36);
+          .price_card {
+            max-width: size(351);
+            width: 100%;
+          }
+          .price_section_card {
+            border-radius: 24px;
+            border: 1px solid var(--secondary, #7024ec);
+            background: var(--Neutral-100, #fff);
+            padding: size(32);
+
+            &_header {
+              .plan {
+                border-radius: 6px;
+                background: #f4eeff;
+                color: #7024ec;
+                font-family: $primaryfont;
+                font-size: 20px;
+                font-weight: 700;
+                padding: size(7) size(15) size(1) size(15);
+              }
+              .plan_price {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: size(26) 0;
+                margin-left: size(12);
+                border-bottom: 1px solid #f4eeff;
+                .title {
+                  color: #1a0013;
+                  font-family: $primaryfont;
+                  font-size: 54px;
+                  font-weight: 700;
+                  line-height: 60px;
+                }
+                .sub_title {
+                  font-family: $primaryfont;
+                  font-size: 18px;
+                  font-weight: 500;
+                  letter-spacing: -0.558px;
+                  background: linear-gradient(90deg, #6523e3 5.7%, #c11795 99.89%);
+                  background-clip: text;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                }
+              }
+            }
+            &_list {
+              padding: size(30) 0;
+              display: flex;
+              flex-direction: column;
+              gap: size(20);
+              .item {
+                display: flex;
+                align-items: center;
+                gap: size(16);
+                .icon {
+                  svg {
+                    width: size(24);
+                    height: size(24);
+                  }
+                }
+                .text {
+                  margin-top: size(4);
+                  color: #52474f;
+                  font-family: $primaryfont;
+                  font-size: 14px;
+                }
+              }
+            }
+          }
         }
       }
     }
