@@ -406,6 +406,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     padding: size(50) size(15);
+    margin-top: size(100);
 
     @include breakpoint(tab992) {
       padding: size(100) size(40);
@@ -781,6 +782,13 @@ body {
     rgba(219, 253, 197, 0.65) 15%,
     rgba(219, 253, 197, 0) 50%
   );
+  padding-top: size(100);
+  @include breakpoint(mobile768) {
+    padding-top: size(150);
+  }
+  @include breakpoint(tab992) {
+    padding-top: size(210);
+  }
   &_wrapper {
     .price_section_header {
       display: flex;
@@ -1064,6 +1072,236 @@ body {
             }
           }
         }
+      }
+    }
+  }
+}
+// testimonial_section
+.testimonial_section {
+  background: linear-gradient(70deg, #45c4f9 0.66%, #701fe5 33.33%, #de00a5 71.77%, #ffc800 100%);
+  padding: size(60) size(0);
+  @include breakpoint(tab992) {
+    padding: size(120) size(0);
+  }
+  &_wrapper {
+    .testimonial_section_header {
+      display: flex;
+      flex-direction: column;
+      gap: size(38);
+
+      .testimonial_section_title {
+        display: flex;
+        gap: size(12);
+        padding: size(5) size(21);
+        justify-content: center;
+        align-items: center;
+        @include radius(8);
+        border: 1px solid $white;
+
+        svg {
+          width: size(10);
+          height: size(10);
+        }
+        .sub_title {
+          color: $white;
+          font-family: $primaryfont;
+          font-size: size(20);
+          font-weight: 500;
+          margin-top: size(6);
+        }
+      }
+      .title {
+        color: $white;
+        text-align: center;
+        font-family: $primaryfont;
+        font-size: size(28);
+        @include breakpoint(mobile768) {
+          font-size: size(42);
+        }
+        font-weight: 700;
+        span {
+          color: #7024ec;
+        }
+      }
+      .description {
+        color: $white;
+        text-align: center;
+        font-family: $primaryfont;
+        font-size: size(20);
+      }
+    }
+    .testimonial_slider_wrapper {
+      margin-top: size(60);
+      padding: 0 size(50);
+      @include breakpoint(desktop1200) {
+        padding: 0 size(100);
+      }
+    }
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+      left: var(--swiper-navigation-sides-offset, 10px);
+      right: auto;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: absolute;
+      top: -140px !important;
+    }
+    .testimonial_card {
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0px 10px 80px 0px rgba(0, 0, 0, 0.06);
+      padding: size(30) size(22);
+      svg {
+        width: size(20);
+        height: size(20);
+      }
+      .text {
+        color: #535354;
+        font-family: $primaryfont;
+        font-size: size(16);
+        line-height: size(28);
+      }
+      .user_image {
+        width: 44px;
+        height: 44px;
+        @include circle;
+      }
+      .title {
+        color: #141b34;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 22px; /* 137.5% */
+      }
+      .subtitle {
+        color: #141b34;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+// footer
+.footer {
+  background-image: url("../../assets/images/Home/footer-bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  &_wrapper {
+    position: relative;
+    margin-top: size(200);
+    padding-top: size(225);
+    z-index: 1;
+    // overflow-x: hidden;
+    .footer_top_content {
+      position: absolute;
+      top: -70%;
+      width: 100%;
+      transform: translateY(70%);
+      border-radius: 40px;
+      background: #fff;
+      box-shadow: 0px 20px 80px 0px rgba(0, 0, 0, 0.08);
+      padding: size(103) 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: size(36);
+      // z-index: 2;
+      .footer_title {
+        color: var(--, #1a0013);
+        font-family: Inter;
+        font-size: 20px;
+        @include breakpoint(mobile768) {
+          font-size: 32px;
+        }
+        @include breakpoint(tab992) {
+          font-size: 48px;
+        }
+        font-style: normal;
+        font-weight: 800;
+        line-height: 150%; /* 72px */
+      }
+    }
+    .socialLink {
+      svg {
+        width: size(25);
+        height: size(25);
+        @include breakpoint(mobile576) {
+          width: size(32);
+          height: size(32);
+        }
+        @include breakpoint(mobile768) {
+          width: size(48);
+          height: size(48);
+        }
+      }
+    }
+
+    .footer_content {
+      margin-top: size(64);
+      padding-bottom: size(100);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+      overflow-x: hidden;
+      .sub_heading {
+        color: #fff;
+        font-family: "Baloo Da 2";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px; /* 66.667% */
+      }
+      .description {
+        color: #fff;
+        font-family: "Baloo Da 2";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 167%; /* 26.72px */
+      }
+    }
+    .description {
+      color: #fff;
+      font-family: "Baloo Da 2";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px; /* 100% */
+    }
+
+    .footer_icon_content {
+      .left_1 {
+        top: size(-384);
+        left: size(-120);
+      }
+      .left_2 {
+        top: size(-320);
+        left: size(-0);
+      }
+      .left_3 {
+        top: size(0);
+        left: size(190);
+      }
+
+      .right_1 {
+        top: size(-256);
+        right: size(-160);
+        z-index: -1;
+      }
+      .right_2 {
+        top: size(-224);
+        right: size(224);
+      }
+      .right_3 {
+        top: size(-20);
+        right: size(120);
       }
     }
   }
