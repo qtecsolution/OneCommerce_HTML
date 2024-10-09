@@ -722,7 +722,13 @@ body {
       margin-top: size(60);
       .process_section_bg {
         width: 100%;
-        height: size(462);
+        height: size(1743);
+        @include breakpoint(mobile768) {
+          height: size(826);
+        }
+        @include breakpoint(tab992) {
+          height: size(462);
+        }
         border-radius: 24px;
         background: #e5faff;
         background-blend-mode: color-burn;
@@ -732,7 +738,13 @@ body {
         z-index: -1;
       }
       .facilities_card_inner {
-        padding: 0 size(40);
+        padding: 0 size(10);
+        @include breakpoint(mobile576) {
+          padding: 0 size(20);
+        }
+        @include breakpoint(tab992) {
+          padding: 0 size(40);
+        }
       }
       .facilities_card {
         border-radius: 24px;
@@ -754,7 +766,7 @@ body {
           color: var(--, #1a0013);
           font-family: $primaryfont;
           font-size: 20px;
-          font-style: normal;
+
           font-weight: 700;
           line-height: normal;
           text-align: center;
@@ -764,7 +776,7 @@ body {
           text-align: center;
           font-family: $primaryfont;
           font-size: 14px;
-          font-style: normal;
+
           font-weight: 400;
           line-height: 27px; /* 192.857% */
           max-width: size(330);
@@ -1036,7 +1048,7 @@ body {
               @include radius(16);
 
               &:not(.collapsed) {
-                background-color: #fff;
+                background-color: $white;
                 box-shadow: none;
               }
 
@@ -1172,7 +1184,7 @@ body {
         color: #141b34;
         font-family: Roboto;
         font-size: 16px;
-        font-style: normal;
+
         font-weight: 600;
         line-height: 22px; /* 137.5% */
       }
@@ -1180,7 +1192,7 @@ body {
         color: #141b34;
         font-family: Roboto;
         font-size: 16px;
-        font-style: normal;
+
         font-weight: 400;
         line-height: 22px;
       }
@@ -1202,13 +1214,15 @@ body {
     // overflow-x: hidden;
     .footer_top_content {
       position: absolute;
-      top: -70%;
+      top: size(-267);
       width: 100%;
-      transform: translateY(70%);
       border-radius: 40px;
       background: #fff;
       box-shadow: 0px 20px 80px 0px rgba(0, 0, 0, 0.08);
-      padding: size(103) 0;
+      padding: size(103) size(30);
+      @include breakpoint(mobile768) {
+        padding: size(103) size(103);
+      }
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -1216,16 +1230,17 @@ body {
       gap: size(36);
       // z-index: 2;
       .footer_title {
-        color: var(--, #1a0013);
-        font-family: Inter;
+        color: #1a0013;
+        font-family: $primaryfont;
         font-size: 20px;
+        text-align: center;
         @include breakpoint(mobile768) {
           font-size: 32px;
         }
         @include breakpoint(tab992) {
           font-size: 48px;
         }
-        font-style: normal;
+
         font-weight: 800;
         line-height: 150%; /* 72px */
       }
@@ -1251,35 +1266,46 @@ body {
       border-bottom: 1px solid rgba(255, 255, 255, 0.28);
       overflow-x: hidden;
       .sub_heading {
-        color: #fff;
-        font-family: "Baloo Da 2";
-        font-size: 24px;
-        font-style: normal;
+        color: $white;
+        font-family: $primaryfont;
+        font-size: size(24);
+
         font-weight: 600;
-        line-height: 16px; /* 66.667% */
+        line-height: size(16);
       }
       .description {
-        color: #fff;
-        font-family: "Baloo Da 2";
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 167%; /* 26.72px */
+        color: $white;
+        font-family: $primaryfont;
+        font-size: size(16);
+        line-height: 167%;
       }
     }
     .description {
-      color: #fff;
-      font-family: "Baloo Da 2";
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 16px; /* 100% */
+      color: $white;
+      font-family: $primaryfont;
+      font-size: size(16);
     }
 
     .footer_icon_content {
       .left_1 {
-        top: size(-384);
-        left: size(-120);
+        top: size(-230);
+        left: size(-30);
+        @include breakpoint(desktop1200) {
+          top: size(-230);
+          left: size(-50);
+        }
+        @include breakpoint(desktop1367) {
+          top: size(-280);
+          left: size(-90);
+        }
+        @include breakpoint(desktop1400) {
+          top: size(-320);
+          left: size(-110);
+        }
+        @include breakpoint(desktop1600) {
+          top: size(-337);
+          left: size(-123);
+        }
       }
       .left_2 {
         top: size(-320);
@@ -1291,8 +1317,21 @@ body {
       }
 
       .right_1 {
-        top: size(-256);
-        right: size(-160);
+        display: none;
+        @include breakpoint(desktop1200) {
+          display: block;
+          right: size(-20);
+        }
+        @include breakpoint(desktop1367) {
+          right: size(-40);
+        }
+        @include breakpoint(desktop1400) {
+          right: size(-30);
+        }
+        @include breakpoint(desktop1600) {
+          right: size(-90);
+        }
+        top: size(-205);
         z-index: -1;
       }
       .right_2 {

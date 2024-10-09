@@ -1,16 +1,16 @@
 up({
   // bottom position
-  bottom: '1.5rem',
+  bottom: "1.5rem",
   // right position
-  right: '.75rem',
+  right: ".75rem",
   // width
-  width: '3rem',
+  width: "3rem",
   // height
-  height: '3rem',
+  height: "3rem",
   // background color
-  bg: '#10537C',
+  bg: "#7024EC",
   // custom icon
-  src: 'assets/cursor/chevron-up-solid.svg',
+  src: "assets/cursor/chevron-up-solid.svg",
   // distance from the top to show the back to top button
   whenShow: 400,
   // circular button?
