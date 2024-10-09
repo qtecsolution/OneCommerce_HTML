@@ -110,10 +110,21 @@ body {
   background: url("../../assets/images/Home/Hero-bg.png") no-repeat;
   background-size: cover;
   background-position: center;
+  .hero_Container {
+    @include breakpoint(desktop1400) {
+      max-width: size(1450);
+    }
+  }
   .hero_wrapper {
-    padding: size(180) size(0) size(125) size(0);
+    padding: size(140) size(0) size(100) size(0);
+    @include breakpoint(mobile576) {
+      padding: size(180) size(0) size(125) size(0);
+    }
     @include breakpoint(tab992) {
       padding: size(250) size(0) size(125) size(0);
+    }
+    @include breakpoint(desktop1400) {
+      padding: size(250) size(0) size(125) size(50);
     }
     overflow-x: hidden;
     @include breakpoint(mobile576) {
@@ -121,16 +132,23 @@ body {
     }
     .Hero_Arrow {
       top: size(48);
-      left: -133px;
-      @include breakpoint(desktop1200) {
-        left: -223px;
+      display: none;
+      @include breakpoint(tab992) {
+        display: block;
+        left: size(-100);
+      }
+      // @include breakpoint(desktop1200) {
+      //   left: size(-100);
+      // }
+      @include breakpoint(desktop1400) {
+        left: size(-170);
       }
     }
 
     .hero_left_content {
       display: flex;
       flex-direction: column;
-      gap: size(35);
+      gap: size(43);
       @include breakpoint(desktop1200) {
         gap: size(56);
       }
@@ -146,7 +164,7 @@ body {
           font-size: size(60);
         }
         font-weight: 800;
-        line-height: 140%;
+        line-height: 130%;
         background: linear-gradient(280deg, #fff 9.23%, #e4d2ff 98.94%);
         background-clip: text;
         -webkit-background-clip: text;
@@ -159,7 +177,7 @@ body {
         @include breakpoint(desktop1200) {
           font-size: size(24);
         }
-        line-height: 167%;
+        line-height: 140%;
         background: radial-gradient(110.79% 110.79% at -5.18% 62.86%, #fff 0%, #ebdefe 100%);
         background-clip: text;
         -webkit-background-clip: text;
@@ -256,7 +274,10 @@ body {
     rgba(251, 245, 205, 0.65) 15%,
     rgba(251, 245, 205, 0) 50%
   );
-  padding: size(120) size(0) size(60) size(0);
+  padding: size(60) size(0) size(60) size(0);
+  @include breakpoint(mobile768) {
+    padding: size(120) size(0) size(60) size(0);
+  }
   &_wrapper {
     .features_section_header {
       display: flex;
@@ -406,7 +427,11 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     padding: size(50) size(15);
-    margin-top: size(100);
+
+    margin-top: size(0);
+    @include breakpoint(mobile768) {
+      margin-top: size(100);
+    }
 
     @include breakpoint(tab992) {
       padding: size(100) size(40);
@@ -555,7 +580,7 @@ body {
     rgba(237, 217, 255, 0.65) 15%,
     rgba(237, 217, 255, 0) 50%
   );
-  // padding-top: size(120);
+  padding-top: size(60);
   @include breakpoint(tab992) {
     padding-top: size(120);
   }
@@ -665,7 +690,7 @@ body {
     rgba(217, 245, 247, 0.5) 15%,
     rgba(217, 245, 247, 0) 50%
   );
-  padding: size(120) size(0);
+  padding: size(60) size(0);
   @include breakpoint(tab992) {
     padding: size(120) size(0);
   }
@@ -867,7 +892,7 @@ body {
           text-align: center;
           font-family: $primaryfont;
           font-size: size(20);
-          padding: size(19) size(33) size(16) size(33);
+          padding: size(15) size(33) size(12) size(33);
           border: none;
           font-weight: 500;
           @include radius(49);
@@ -1271,7 +1296,7 @@ body {
         font-size: size(24);
 
         font-weight: 600;
-        line-height: size(16);
+        line-height: size(32);
       }
       .description {
         color: $white;
