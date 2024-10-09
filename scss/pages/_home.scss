@@ -926,6 +926,10 @@ body {
             border: 1px solid var(--secondary, #7024ec);
             background: var(--Neutral-100, #fff);
             padding: size(32);
+            min-height: 652px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
             &_header {
               .plan {
@@ -1080,6 +1084,13 @@ body {
               &:focus {
                 box-shadow: none;
               }
+
+              &::after {
+                width: size(48);
+                height: size(48);
+                background-image: url("../../assets/images/Home/arrow.png");
+                background-size: cover;
+              }
             }
           }
 
@@ -1089,6 +1100,11 @@ body {
             border: 1px solid #de00a5;
             border-bottom: none;
             box-shadow: 0px 6px 16px 0px rgba(222, 0, 165, 0.19);
+
+            &::after {
+              background-image: url("../../assets/images/Home/active-arrow.png");
+              transform: rotate(360deg);
+            }
           }
 
           .accordion-collapse.show {
@@ -1174,16 +1190,26 @@ body {
         padding: 0 size(100);
       }
     }
-    .swiper-button-prev,
-    .swiper-rtl .swiper-button-next {
-      left: var(--swiper-navigation-sides-offset, 10px);
-      right: auto;
-    }
 
-    .swiper-button-next,
-    .swiper-button-prev {
+    #swiper-button-next,
+    #swiper-button-prev {
       position: absolute;
-      top: -140px !important;
+      top: -165px !important;
+      @include breakpoint(desktop1400) {
+        top: -140px !important;
+      }
+
+      svg {
+        width: size(30);
+        height: size(30);
+        @include breakpoint(mobile768) {
+          width: size(48);
+          height: size(48);
+        }
+      }
+    }
+    #swiper-button-next {
+      right: 0 !important;
     }
     .testimonial_card {
       border-radius: 16px;
@@ -1330,6 +1356,12 @@ body {
         @include breakpoint(desktop1600) {
           top: size(-337);
           left: size(-123);
+        }
+        img {
+          width: size(90);
+          @include breakpoint(tab992) {
+            width: size(168);
+          }
         }
       }
       .left_2 {
