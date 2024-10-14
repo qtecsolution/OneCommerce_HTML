@@ -148,9 +148,9 @@ body {
     .hero_left_content {
       display: flex;
       flex-direction: column;
-      gap: size(43);
+      gap: size(25);
       @include breakpoint(desktop1200) {
-        gap: size(56);
+        gap: size(35);
       }
 
       .hero_title {
@@ -164,7 +164,7 @@ body {
           font-size: size(60);
         }
         font-weight: 800;
-        line-height: 130%;
+        line-height: 140%;
         background: linear-gradient(280deg, #fff 9.23%, #e4d2ff 98.94%);
         background-clip: text;
         -webkit-background-clip: text;
@@ -229,6 +229,12 @@ body {
         gap: size(20);
       }
       border: 1px dashed #de00a5;
+      &.data {
+        border: 1px dashed #ff9c11;
+      }
+      &.marketing {
+        border: 1px dashed #7024ec;
+      }
       @include radius(16);
       .service_image_wrapper {
         img {
@@ -289,12 +295,12 @@ body {
       }
       .features_section_title {
         display: inline-flex;
-        padding: size(15) size(21);
+        padding: size(5) size(21);
         gap: size(12);
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
-        border-radius: 8px;
+        @include radius(8);
         border: 1px solid #ffb700;
         svg {
           width: size(10);
@@ -707,14 +713,14 @@ body {
         justify-content: center;
         align-items: center;
         @include radius(8);
-        border: 1px solid #fd1774;
+        border: 1px solid #de00a5;
 
         svg {
           width: size(10);
           height: size(10);
         }
         .sub_title {
-          color: #fd1774;
+          color: #de00a5;
           font-family: $primaryfont;
           font-size: size(20);
           font-weight: 500;
@@ -922,22 +928,24 @@ body {
             width: 100%;
           }
           .price_section_card {
-            border-radius: 24px;
-            border: 1px solid var(--secondary, #7024ec);
-            background: var(--Neutral-100, #fff);
+            @include radius(24);
+            border: 1px solid #dfd4f1;
+            background: #fff;
             padding: size(32);
-            min-height: 652px;
+            min-height: size(652);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-
+            &.active {
+              border: 1px solid #7024ec;
+            }
             &_header {
               .plan {
-                border-radius: 6px;
+                @include radius(6);
                 background: #f4eeff;
                 color: #7024ec;
                 font-family: $primaryfont;
-                font-size: 20px;
+                font-size: size(20);
                 font-weight: 700;
                 padding: size(7) size(15) size(1) size(15);
               }
@@ -951,13 +959,14 @@ body {
                 .title {
                   color: #1a0013;
                   font-family: $primaryfont;
-                  font-size: 54px;
+                  font-size: size(54);
                   font-weight: 700;
-                  line-height: 60px;
+                  line-height: size(60);
                 }
                 .sub_title {
                   font-family: $primaryfont;
-                  font-size: 18px;
+                  font-size: size(18);
+                  line-height: 130%;
                   font-weight: 500;
                   letter-spacing: -0.558px;
                   background: linear-gradient(90deg, #6523e3 5.7%, #c11795 99.89%);
